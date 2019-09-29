@@ -1,0 +1,15 @@
+
+#getting the list as input from user we keep in list
+list = []
+# In order to take integers from the user
+string_file = input ("Enter integers with comma seperated list")
+
+list2=[]
+# New list to keep the comma seperated values in it
+list2 = string_file.split (",")
+for i in list2:
+    list.append(int(i))
+list1 = []
+#this list will contain the numbers which are divisible by 3
+list1=[i**2 for i in list if i%3==0]
+print("\n The square of numbers which are divisible by 3 among the list is:",list1)
