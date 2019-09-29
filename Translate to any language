@@ -1,0 +1,18 @@
+import os
+os.getcwd()
+text=input("Enter the text to be translated: ")
+# Creating a translate file with write permission
+input_file=open("translate.txt","w")
+input_file.write(text)
+input_file.close()
+input_file=open("translate.txt","r")
+text=input_file.read()
+input_file.close()
+from translate import Translator
+# Translating to a langauge of my choice- Malayalam
+translator= Translator(to_lang="Malayalam")
+t2=translator.translate(text)
+print(t2)
+
+
+
