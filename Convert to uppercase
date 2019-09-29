@@ -1,0 +1,9 @@
+def change_to_uppercase(matter):
+    num_upper = 0
+    for letter in matter[1:5]:
+        if letter.upper() == letter:
+            num_upper =num_upper + 1
+    if num_upper >= 2:
+        return matter.upper()
+    return matter
+print(change_to_uppercase(input('Enter the matter:')))
