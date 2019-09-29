@@ -1,0 +1,15 @@
+
+def solution(nums):
+    num_sums=[]
+    for num in nums:
+        num_sums.append(sum([i*i for i in range(1,num)]))
+    while len(num_sums) > 2:
+        num_sums_temp = num_sums[:]
+        # enumerate function is used to iterate through the list of elements and its index at the same time
+        for ind, num in enumerate(num_sums_temp, 1):
+            if ind%3 == 0:
+                num_sums.remove(num)
+                print (num_sums_temp)
+    print(num_sums[0])
+    print(num_sums[1])
+    print("Final sum of the 3rd digits",num)
