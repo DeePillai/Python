@@ -1,0 +1,10 @@
+def speed_limit(speed):
+    if speed <= 70:
+        return print("Good, keep the speed limit less that 70 always to avoid accidents. Good day!!")
+    else:
+        actual_speed = (speed-70)//5
+        if actual_speed <= 12:
+            return print(f"Your speed is more than 70, your demerit point is: {actual_speed}")
+        else:
+            return print("Your license has been suspended")
+enter_speed = speed_limit(int(input("Enter the speed: ")))
