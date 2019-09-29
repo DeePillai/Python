@@ -1,0 +1,50 @@
+
+#to read the orders from text file
+import pandas as pd
+orders=pd.read_csv("cartons.txt",delimiter=",")
+print(orders)
+count=0
+list=[]
+# suppliers dimensions
+supplier_dimension = [(10,20),(120,60),(80,50),(50,20)]
+length=[]
+breadth=[]
+for i in range(0,len(supplier_dimension)):
+    j=0
+    k=1
+    # In order to traverse through the list which is specified by the supplier
+    length.append(supplier_dimension[i][j])
+    breadth.append(supplier_dimension[i][k])
+# To calculate the sheet size which is required.
+for i in range(len(orders)):
+    # When a cardboard is opened the size would be 2(l+b) and (h+b)
+        length_of_sheet=2*(orders["length"][i]+orders["width"][i])
+        breadth_of_sheet=(orders["height"][i]+orders["length"][i])
+        # To get the number of cartons from the cartons.txt
+        n=orders["noofcartons"][i]
+        print("The required dimension is: ",length_of_sheet," * ",breadth_of_sheet," quantity:",n)
+        #  in order to find the minimum length from the supplier, so as to select it
+        selected=[x for x in length if x>length_of_sheet and x>breadth_of_sheet]
+        max_length=min(selected)
+        # From the length which is selected to select the width of it from the list given in supplier dimension
+        index_selected=length.index(max_length)
+        max_bredth=breadth[index_selected]
+        x=max_length
+        y=max_bredth
+        a=1
+    # To check if any length is remaining from the sheet, so that it can use that for making another cardboard
+        while x-length_of_sheet >= length_of_sheet and y-breadth_of_sheet >= breadth_of_sheet:
+            x=x-length_of_sheet
+            print(x)
+            y=y-breadth_of_sheet
+            print(y)
+            a=a+1
+    #total number of cartons that fits in one sheet
+        b=int(n/a)
+        if b*a==n:
+            no_of_cartons=b
+        else:
+            no_of_cartons=b+1
+        print("Dimension of the supplier are: ",max_length,max_bredth,no_of_cartons)
+
+
