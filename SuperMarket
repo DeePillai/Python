@@ -1,0 +1,73 @@
+
+# Creating a list of items available in the diary section of my super store
+my_super_store=['Milk','Paneer','Butter','Cheese']
+expiry_date=("26/07/2019")
+print("The product",my_super_store[0]," will expire on",expiry_date)
+# Creating an empty dictionary
+dtm={}
+# Adding key value pairs of expiry date,size,MRP, Brand Name and Best Price
+dtm={1:expiry_date,2:'Size:0.5ltr',3:'Size:1lts',4:50,5:100,6:'Amul',7:'Nandini',8:'GoodLife',9:'Milma',10:48,11:98,12:96}
+# List of products
+prod1=[1,3,5,8,11]
+prod2=[1,2,4,7,10]
+prod3=[1,3,4,6,10]
+prod4=[1,3,5,6,11]
+prod5=[1,2,5,7,12]
+prod6=[1,2,5,9,11]
+prod7=[1,3,4,9,10]
+prod8=[1,2,4,9,10]
+prod9=[1,2,4,8,11]
+prod10=[1,3,5,7,12]
+# In order to map the product with the dictionary using map.
+a=list(map(dtm.get, prod1))
+b=list(map(dtm.get, prod2))
+c=list(map(dtm.get, prod3))
+d=list(map(dtm.get, prod4))
+e=list(map(dtm.get, prod5))
+f=list(map(dtm.get, prod6))
+g=list(map(dtm.get, prod7))
+h=list(map(dtm.get, prod8))
+i=list(map(dtm.get, prod9))
+j=list(map(dtm.get, prod10))
+
+#Printing values of all the 10 items of Milk available in My Super Store
+print("\n The list of Milk packets available are as follows: ")
+print("\n",a,"\n",b,"\n",c,"\n",d,"\n",d,"\n",f,"\n",g,"\n",h,"\n",i,"\n",j)
+
+# Calculating the total price of product and the total savings
+Total_best_price=a[2]+b[2]+c[2]+d[2]+e[2]+f[2]+g[2]+h[2]+i[2]+j[2]
+Total_mrp_price=a[4]+b[4]+c[4]+d[4]+e[4]+f[4]+g[4]+h[4]+i[4]+j[4]
+Total_savings=Total_mrp_price-Total_best_price
+print("Total Best Price of 10 Products is:",Total_best_price)
+print("Total MRP of 10 Products:",Total_mrp_price)
+print("Total savings on 10 Products is:",Total_savings)
+
+
+# Calculating the price of products of rival company
+dtm.update({13:52,14:99,15:96})
+print(dtm)
+rival_prod1=[1,3,5,8,11,14]
+rival_prod2=[1,2,4,7,10,13]
+rival_prod3=[1,3,4,6,10,13]
+rival_prod4=[1,3,5,6,11,15]
+rival_prod5=[1,2,5,7,12,14]
+rival_prod6=[1,2,5,9,11,15]
+rival_prod7=[1,3,4,9,10,13]
+rival_prod8=[1,2,4,9,10,13]
+rival_prod9=[1,2,4,8,11,14]
+rival_prod10=[1,3,5,7,12,14]
+a1=list(map(dtm.get, rival_prod1))
+b1=list(map(dtm.get, rival_prod2))
+c1=list(map(dtm.get, rival_prod3))
+d1=list(map(dtm.get, rival_prod4))
+e1=list(map(dtm.get, rival_prod5))
+f1=list(map(dtm.get, rival_prod6))
+g1=list(map(dtm.get, rival_prod7))
+h1=list(map(dtm.get, rival_prod8))
+i1=list(map(dtm.get, rival_prod9))
+j1=list(map(dtm.get, rival_prod10))
+# Difference of rival with difference of my super store
+rival_store_price=a1[5]+b1[5]+c1[5]+d1[5]+e1[5]+f1[5]+g1[5]+h1[5]+i1[5]+j1[5]
+print("The sum of prices of 10 items in rival_store_price",rival_store_price)
+print('Difference between My super store and rival store:',[rival_store_price-Total_best_price])
+print("You save ",[rival_store_price-Total_best_price]," if you purchase from My super store when compared with our neighbouring shops")
