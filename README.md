@@ -31,5 +31,32 @@ Let the program calculate the total price of the 10 units as charged by the supe
 Append a new column to the dictionary called competePrice which contains the prices of the rival super market. Let the program compare the prices of the rival to the prices of My Super Store, considering the total price of the 10 units.
 
 
+4.Suppose the traffic police department approaches you with the problem of
+monitoring the speed of drivers to get real time information. The permitted speed
+limit is 70 kmph. For every 5 km above the speed limit (70), the driver is awarded
+one demerit point. For example, if the speed is 80, 2 demerit points are awarded. If
+the driver gets more than 12 points, his/her license will be suspended. Take the
+speed as input and print information regarding adherence to speed limit, demerit
+points (if any), and whether the license has to be suspended.
+
+
+5. Suppose a printer approaches you to automate the process of printing banners,
+business cards and letter heads to some extent. His problem is simply to check if at
+least 2 uppercase letters exist in the first four characters of the matter provided by
+his clients and, if so, convert the entire string to uppercase. Help the printer to
+automate this process.
+
+6. A mathematician wants to find the sum of the square of all the positive integers
+smaller than a specified number. He wants to repeat this process for 15 given
+numbers. But he only wants to print every third sum from the list of 15 sums and
+discard it. He wants to repeat this process until the list becomes empty. Help him to
+achieve his objective.
+
+7. A small shop owner in India wants to find the optimum number of notes (Sample of
+notes: 5, 10, 20, 50, 100, 200, 500, 1000, 2000) in a given amount of money he has
+collected. Help him get the answer.
+
+
+
 
 
