@@ -13,3 +13,9 @@ def solution(nums):
     print(num_sums[0])
     print(num_sums[1])
     print("Final sum of the 3rd digits",num)
+    
+    
+if __name__=="__main__":
+    nums=[int(input("Enter the number{}".format(i))) for i in range(1,16)]
+    solution(nums)
+
