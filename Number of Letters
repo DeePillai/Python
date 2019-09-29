@@ -1,0 +1,13 @@
+# to open the file which has the sentences
+file=open("test.txt","r")
+file_read=(file.read())
+#k=0
+#with open(file,'r') as f:
+#    for line in f:
+#        words = line.split()
+#        k=k+1
+# To count the word
+word=string.count('Business Analytics')
+print("The word Business Analytics appears",word,"times in the file test.txt")
+
+# Create a file test.txt and give the paragraph as written in the read me file.
