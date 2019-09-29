@@ -1,0 +1,23 @@
+
+import os
+os.getcwd()
+list = []
+f = open("newfile.csv", 'w')
+# checking the condition in range 2000 and 3000
+for i in range(2000, 3001):
+    if i % 9 == 0 and i % 6 != 0:
+        list.append(i)
+# for giving 10 lines in a row
+for i in range(0, len(list)):
+    if i == 9 or i % 10 == 9:
+# when it finishes the 10th line then gives comma and goes to next line
+        f.write(str(list[i]) + "\n")
+    else:
+# For new line
+        f.write(str(list[i]) + ",")
+file = open("newfile.csv", 'r')
+# in order to read from file
+text = file.read()
+print(text)
+
+
